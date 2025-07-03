@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.502.3](https://github.com/windmill-labs/windmill/compare/v1.502.2...v1.502.3) (2025-07-03)
+
+
+### Bug Fixes
+
+* carousel app component, expose current index ([#6120](https://github.com/windmill-labs/windmill/issues/6120)) ([7284c51](https://github.com/windmill-labs/windmill/commit/7284c51762ff03537fb1869a0d1a18fc2b9b24ef))
+* error handling for S3 file loading in py and ts clients ([#6124](https://github.com/windmill-labs/windmill/issues/6124)) ([23d624a](https://github.com/windmill-labs/windmill/commit/23d624aa23e96ab3c25564b4c148e4186892de59))
+
 ## [1.502.2](https://github.com/windmill-labs/windmill/compare/v1.502.1...v1.502.2) (2025-07-01)
 
 
