@@ -6830,6 +6830,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "io-uring"
+version = "0.7.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b86e202f00093dcba4275d4636b93ef9dd75d025ae560d2521b45ea28ab49013"
+dependencies = [
+ "bitflags 2.9.1",
+ "cfg-if",
+ "libc",
+]
+
+[[package]]
 name = "ipconfig"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8726,9 +8737,9 @@ checksum = "d05e27ee213611ffe7d6348b942e8f942b37114c00cc03cec254295a4a17852e"
 
 [[package]]
 name = "openssl-src"
-version = "300.5.0+3.5.0"
+version = "300.5.1+3.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e8ce546f549326b0e6052b649198487d91320875da901e7bd11a06d1ee3f9c2f"
+checksum = "735230c832b28c000e3bc117119e6466a663ec73506bc0a9907ea4187508e42a"
 dependencies = [
  "cc",
 ]
@@ -10443,8 +10454,8 @@ dependencies = [
 
 [[package]]
 name = "rmcp"
-version = "0.1.5"
-source = "git+https://github.com/modelcontextprotocol/rust-sdk#9ca20c69b27e531a5eadfd4b5654592ab93e2b11"
+version = "0.2.1"
+source = "git+https://github.com/modelcontextprotocol/rust-sdk#31155a440c094c4349ec1e18df156d5b992867fa"
 dependencies = [
  "base64 0.22.1",
  "bytes",
@@ -10472,8 +10483,8 @@ dependencies = [
 
 [[package]]
 name = "rmcp-macros"
-version = "0.1.5"
-source = "git+https://github.com/modelcontextprotocol/rust-sdk#9ca20c69b27e531a5eadfd4b5654592ab93e2b11"
+version = "0.2.1"
+source = "git+https://github.com/modelcontextprotocol/rust-sdk#31155a440c094c4349ec1e18df156d5b992867fa"
 dependencies = [
  "darling 0.20.11",
  "proc-macro2",
@@ -13143,17 +13154,19 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.45.1"
+version = "1.46.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "75ef51a33ef1da925cea3e4eb122833cb377c61439ca401b770f54902b806779"
+checksum = "1140bb80481756a8cbe10541f37433b459c5aa1e727b4c020fbfebdc25bf3ec4"
 dependencies = [
  "backtrace",
  "bytes",
+ "io-uring",
  "libc",
  "mio 1.0.4",
  "parking_lot 0.12.4",
  "pin-project-lite",
  "signal-hook-registry",
+ "slab",
  "socket2",
  "tokio-macros",
  "tracing",
@@ -14629,7 +14642,7 @@ checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
 
 [[package]]
 name = "windmill"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "axum",
@@ -14681,7 +14694,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-api"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "argon2",
@@ -14792,7 +14805,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-api-client"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "base64 0.22.1",
  "chrono",
@@ -14807,7 +14820,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-audit"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "chrono",
  "serde",
@@ -14820,7 +14833,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-autoscaling"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "serde",
@@ -14834,7 +14847,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-common"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "async-stream",
@@ -14911,7 +14924,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-git-sync"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "regex",
  "serde",
@@ -14925,7 +14938,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-indexer"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "bytes",
@@ -14948,7 +14961,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-macros"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "itertools 0.14.0",
  "lazy_static",
@@ -14960,7 +14973,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "convert_case 0.6.0",
  "serde",
@@ -14969,7 +14982,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-bash"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "lazy_static",
@@ -14981,7 +14994,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-csharp"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "serde_json",
@@ -14993,7 +15006,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-go"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "gosyn",
@@ -15005,7 +15018,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-graphql"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "lazy_static",
@@ -15017,7 +15030,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-java"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "serde_json",
@@ -15029,7 +15042,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-nu"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "nu-parser",
@@ -15040,7 +15053,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-php"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "itertools 0.14.0",
@@ -15051,7 +15064,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-py"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "itertools 0.14.0",
@@ -15062,7 +15075,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-py-imports"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "async-recursion",
@@ -15085,7 +15098,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-rust"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "convert_case 0.6.0",
@@ -15102,7 +15115,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-sql"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "lazy_static",
@@ -15114,7 +15127,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-ts"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "lazy_static",
@@ -15132,7 +15145,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-wasm"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "getrandom 0.2.16",
@@ -15156,7 +15169,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-parser-yaml"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "serde_json",
@@ -15166,7 +15179,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-queue"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "async-recursion",
@@ -15199,7 +15212,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-sql-datatype-parser-wasm"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "wasm-bindgen",
  "wasm-bindgen-test",
@@ -15209,7 +15222,7 @@ dependencies = [
 
 [[package]]
 name = "windmill-worker"
-version = "1.502.2"
+version = "1.502.3"
 dependencies = [
  "anyhow",
  "async-recursion",
